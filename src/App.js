@@ -1,12 +1,17 @@
 import "./App.css";
 import LoginPage from "./Login/LoginPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./dashboard/Dashboard";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <LoginPage />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

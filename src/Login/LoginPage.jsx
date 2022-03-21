@@ -1,6 +1,13 @@
 import style from "./loginPage.module.css";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+  const onClickHandler = (e) => {
+    e.preventDefault();
+    navigate("/dashboard");
+  };
+
   return (
     <div className={style.login}>
       <div className={style.login__upper}>
@@ -84,7 +91,9 @@ const LoginPage = () => {
             id="password"
           />
           <span className={style.span}>Forgot Password</span>
-          <button className={style.button}>Sign in</button>
+          <button onClick={onClickHandler} className={style.button}>
+            Sign in
+          </button>
         </form>
       </div>
     </div>
