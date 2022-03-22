@@ -1,5 +1,5 @@
 import style from "./dashBoard.module.css";
-
+import MainDash from "../main/MainDash.jsx";
 const Dashboard = () => {
   return (
     <div className={style.dashboard}>
@@ -59,6 +59,7 @@ const Dashboard = () => {
               <img src="/assets/men.png" alt="men" />
             </div>
           </nav>
+          <MainDash />
         </div>
       </div>
     </div>

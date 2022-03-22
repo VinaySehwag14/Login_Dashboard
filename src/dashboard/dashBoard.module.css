@@ -75,6 +75,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 1.4em;
 }
 
 .navbar__icons {
